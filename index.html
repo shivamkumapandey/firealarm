@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireGuard AI System</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #ff4757;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        .status-badge {
+            background-color: #2f3542;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #00d2d3;
+            margin-bottom: 30px;
+        }
+        .video-container {
+            border: 4px solid #333;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 71, 87, 0.2);
+            line-height: 0; /* Remove gap below image */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #747d8c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔥 FireGuard AI System</h1>
+        <div class="status-badge">System Status: Active • Monitoring Feed</div>
+
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" width="800" alt="Live Video Feed">
+        </div>
+
+        <div class="footer">
+            Powered by Python, OpenCV & Flask
+        </div>
+    </div>
+
+</body>
+</html>
