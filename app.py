@@ -15,7 +15,7 @@ ALARM_SOUND_FILE = "fire_alarm.mp3"
 # --- Sound Handling ---
 def play_alarm_sound():
     try:
-        from playsound import playsound
+        from playsound3 import playsound
         if os.path.exists(ALARM_SOUND_FILE):
             playsound(ALARM_SOUND_FILE)
     except Exception:
